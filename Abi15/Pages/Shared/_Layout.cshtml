@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Invitación - 15 Años de Abi"]</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+    <!-- Overlay de bienvenida -->
+    <div id="bienvenida" class="overlay">
+        <div class="overlay-content">
+            <h1 class="gold-text">¡Grandes Noticias!</h1>
+            <p>Has sido invitado a una noche mágica que quedará en tu memoria:</p>
+            <h2 class="highlight">Los 15 años de Abi</h2>
+            <button id="btnContinuar" class="btn-main">Ver Invitación</button>
+        </div>
+    </div>
+
+
+    <!-- Contenido principal -->
+    <header class="bg-primary text-white text-center py-4">
+        <h1>¡Bienvenidos a los 15 Años de Abi!</h1>
+        <p class="lead">17 de marzo de 2025 | Salón Luz de Luna</p>
+    </header>
+
+    <main class="container mt-4">
+        <p>Estamos emocionados de que formes parte de este evento tan especial. Prepárate para una noche inolvidable llena de sorpresas y diversión.</p>
+    
+        @RenderBody()
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 15 Años de Abi. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/js/site.js"></script>
+</body>
+
+</html>

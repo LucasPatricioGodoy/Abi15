@@ -1,0 +1,391 @@
+/* Fondo del overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('/images/night-sky.jpg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+}
+
+/* Contenedor del texto con fondo semitransparente */
+.overlay-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+    padding: 20px 40px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Texto dorado */
+.gold-text {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffd700, #ffcc33, #ffdd88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+/* Botón de bienvenida */
+.btn-main {
+    background-color: #ffd700;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .btn-main:hover {
+        background-color: #ffcc33;
+        transform: scale(1.1);
+    }
+
+/* Ocultar overlay */
+.overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Efecto de estrellas */
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/stars.png') repeat;
+    opacity: 0.8;
+    animation: moveStars 20s linear infinite;
+    z-index: 1;
+}
+
+/* Evitar que las estrellas tapen el texto */
+.overlay-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Animación del movimiento de las estrellas */
+@keyframes moveStars {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 1000px 1000px;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #1e1e4f; /* Azul noche */
+    color: #fff;
+    text-align: center;
+}
+
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #1e1e4f; /* Azul noche */
+    color: #fff;
+    text-align: center;
+}
+
+/* Hero section */
+.hero {
+    background-image: url('/images/night-sk.jpg');
+    background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+    background-position: center center; /* Centra la imagen */
+    padding: 100px 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+    .hero h1 {
+        font-size: 3em;
+        font-family: 'Lora', serif;
+        color: #ffd700; /* Dorado */
+    }
+
+    .hero .lead {
+        font-size: 1.2em;
+    }
+
+    .hero .btn-main {
+        background-color: #ffd700; /* Dorado */
+        color: #1e1e4f; /* Azul noche */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease;
+    }
+
+        .hero .btn-main:hover {
+            background-color: #d4af37; /* Un dorado más oscuro */
+        }
+
+.section {
+    padding: 40px 20px;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+/* Lista en agenda */
+#agenda ul {
+    list-style-type: none;
+    font-size: 1.1em;
+}
+
+#agenda li {
+    margin: 10px 0;
+}
+
+/* Galería */
+.gallery img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* Efecto de desplazamiento suave */
+html {
+    scroll-behavior: smooth;
+}
+
+.section.visible {
+    opacity: 1; /* Solo manejamos opacidad */
+    transition: opacity 1s ease-out;
+}
+
+.butterflies {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Evita que interfieran con clics */
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.butterfly {
+    position: absolute;
+    width: 50px; /* Ajusta según el tamaño que prefieras */
+    animation: fly 10s linear infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(-10vw, 100vh) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(50vw, 50vh) rotate(20deg);
+    }
+
+    100% {
+        transform: translate(110vw, -10vh) rotate(-10deg);
+    }
+}
+
+/* Opcional: Diferentes animaciones para cada mariposa */
+/* Variación en tamaños, velocidades y posiciones iniciales */
+.butterfly:nth-child(1) {
+    width: 40px;
+    animation: fly1 10s linear infinite, flutter 0.5s ease-in-out infinite;
+    top: 20%; /* Posición inicial */
+    left: 5%;
+}
+
+.butterfly:nth-child(2) {
+    width: 60px;
+    animation: fly2 12s linear infinite, flutter 0.6s ease-in-out infinite;
+    top: 10%;
+    left: 80%;
+}
+
+.butterfly:nth-child(3) {
+    width: 45px;
+    animation: fly3 8s linear infinite, flutter 0.4s ease-in-out infinite;
+    top: 50%;
+    left: 20%;
+}
+
+.butterfly:nth-child(4) {
+    width: 55px;
+    animation: fly4 14s linear infinite, flutter 0.5s ease-in-out infinite;
+    top: 70%;
+    left: 60%;
+}
+
+.butterfly:nth-child(5) {
+    width: 50px;
+    animation: fly5 11s linear infinite, flutter 0.5s ease-in-out infinite;
+    top: 30%;
+    left: 40%;
+}
+
+@keyframes fly1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(50vw, -20vh);
+    }
+
+    50% {
+        transform: translate(20vw, 30vh);
+    }
+
+    75% {
+        transform: translate(70vw, -40vh);
+    }
+
+    100% {
+        transform: translate(100vw, 0);
+    }
+}
+
+@keyframes fly2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-40vw, 20vh);
+    }
+
+    50% {
+        transform: translate(-10vw, -30vh);
+    }
+
+    75% {
+        transform: translate(-60vw, 40vh);
+    }
+
+    100% {
+        transform: translate(-100vw, 0);
+    }
+}
+
+@keyframes fly3 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(30vw, 20vh);
+    }
+
+    50% {
+        transform: translate(-20vw, -20vh);
+    }
+
+    75% {
+        transform: translate(50vw, 40vh);
+    }
+
+    100% {
+        transform: translate(100vw, 0);
+    }
+}
+
+@keyframes fly4 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-30vw, -20vh);
+    }
+
+    50% {
+        transform: translate(40vw, 30vh);
+    }
+
+    75% {
+        transform: translate(-50vw, -40vh);
+    }
+
+    100% {
+        transform: translate(-100vw, 0);
+    }
+}
+
+@keyframes fly5 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(20vw, -30vh);
+    }
+
+    50% {
+        transform: translate(-30vw, 20vh);
+    }
+
+    75% {
+        transform: translate(60vw, -50vh);
+    }
+
+    100% {
+        transform: translate(100vw, 0);
+    }
+}
+
+
