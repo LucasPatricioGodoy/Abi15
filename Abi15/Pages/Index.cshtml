@@ -4,12 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="hero">
-    <h1>¡Te invito a mis 15 años!</h1>
-    <p class="lead">17 de marzo de 2025 | Salón Luz de Luna</p>
-    <a href="#detalles" class="btn-main">Ver detalles</a>
 
-</div>
 
 <div id="detalles" class="section">
     <h2>Detalles del Evento</h2>
@@ -29,18 +24,43 @@
 <div id="rsvp" class="section">
     <h2>RSVP</h2>
     <p>Confirma tu asistencia antes del 1 de marzo de 2025.</p>
-    <a href="mailto:abi@correo.com" class="btn-main">Confirmar Asistencia</a>
+    <div id="formularioAsistencia">
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScORAq3Kb5XxR8TfKF0Oxp2ugEaR1Dx_DFrTSS49cxx9Z4oJg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+        </div>
+    </div>
+
 </div>
 
 <div id="galeria" class="section">
-    <h2>Galería</h2>
-    <p>¡Mira algunos momentos especiales!</p>
-    <div class="gallery">
 
-        <img src="/images/foto1.jpg" alt="Foto 1">
-        <img src="/images/foto3.jpg" alt="Foto 2">
-        <img src="/images/foto3.jpg" alt="Foto 3">
+
+
+
+    <div class="gallery">
+        <div class="carousel">
+            <div class="slide">
+                <img src="/Images/foto1.jpg" alt="Imagen 1">
+                <div class="frase">Cada paso que das nos llena de alegría y amor ❤️</div>
+            </div>
+            <div class="slide">
+                <img src="/images/foto1.jpg" alt="Imagen 2">
+                <div class="frase">El tiempo vuela, pero tu esencia sigue intacta... ¡Qué emoción verte crecer! 💫</div>
+            </div>
+            <div class="slide">
+                <img src="/Images/foto2.jpg" alt="Imagen 3">
+                <div class="frase">Los mejores momentos siempre están rodeados de quienes más amamos ❤️</div>
+            </div>
+            <div class="slide">
+                <img src="/images/foto1.jpg" alt="Imagen 4">
+                <div class="frase">Así como en esta foto, sigues haciendo que el mundo sea un lugar más brillante 🌟</div>
+            </div>
+        </div>
+        <button class="prev">Anterior</button>
+        <button class="next">Siguiente</button>
+
     </div>
+
 </div>
 <div class="butterflies">
     <img src="/images/butterfly1.png" alt="Mariposa" class="butterfly">
@@ -51,3 +71,5 @@
     <img src="/images/Butterfly1.png" alt="Mariposa" class="butterfly">
 
 </div>
+
+

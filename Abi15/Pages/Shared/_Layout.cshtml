@@ -6,33 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Invitación - 15 Años de Abi"]</title>
     <link rel="stylesheet" href="/css/site.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
     <!-- Overlay de bienvenida -->
     <div id="bienvenida" class="overlay">
         <div class="overlay-content">
-            <h1 class="gold-text">¡Grandes Noticias!</h1>
+            <h1 class="silver-text">¡Grandes Noticias!</h1>
             <p>Has sido invitado a una noche mágica que quedará en tu memoria:</p>
             <h2 class="highlight">Los 15 años de Abi</h2>
             <button id="btnContinuar" class="btn-main">Ver Invitación</button>
         </div>
     </div>
 
+    <div class="particle-container"></div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <h1>¡Te invito a mis 15 años!</h1>
+        <button id="btnVerInvitacion" class="btn-main">Ver invitación</button>
+    </section>
 
     <!-- Contenido principal -->
-    <header class="bg-primary text-white text-center py-4">
-        <h1>¡Bienvenidos a los 15 Años de Abi!</h1>
-        <p class="lead">17 de marzo de 2025 | Salón Luz de Luna</p>
-    </header>
+    <section id="contenido" class="contenido" style="display: none;">
+        <header class="bg-primary text-white text-center py-4">
+            <h1 class="special-title">¡Estás invitado a mi noche especial!</h1>
+            <p class="lead">17 de marzo de 2025 | Salón Luz de Luna</p>
+        </header>
 
-    <main class="container mt-4">
-        <p>Estamos emocionados de que formes parte de este evento tan especial. Prepárate para una noche inolvidable llena de sorpresas y diversión.</p>
-    
-        @RenderBody()
-    </main>
+        <main class="container mt-4">
+            <p class="invitation-text">Hola, soy Abi y quiero invitarte a celebrar mis 15 años. El 17 de marzo será una noche que nunca olvidaré, ¡y me encantaría que estés allí para compartirla conmigo! Habrá música, sorpresas y mucha diversión. Será una fiesta llena de momentos especiales, y tu presencia hará que sea aún más inolvidable.</p>
 
-    <footer class="bg-dark text-white text-center py-3 mt-5">
+            @RenderBody()
+        </main>
+    </section>
+
+
+    <footer class="bg-dark text-white text-center py-3 mt-5" style="background-color: rgba(0, 0, 0, 0.7">
         <p>&copy; 2025 15 Años de Abi. Todos los derechos reservados.</p>
     </footer>
 
@@ -40,3 +50,8 @@
 </body>
 
 </html>
+<script>
+    document.querySelector('.btn-main').addEventListener('click', function () {
+        confetti();
+    });
+</script>
