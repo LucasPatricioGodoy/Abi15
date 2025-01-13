@@ -333,21 +333,10 @@ html {
     transition: opacity 1s ease-out;
 }
 
-.butterflies {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Evita que interfieran con clics */
-    overflow: hidden;
-    z-index: 9999;
-}
-
 .butterfly {
     position: absolute;
     width: 50px; /* Ajusta según el tamaño que prefieras */
-    animation: fly 10s linear infinite;
+    animation: fly 20s linear infinite; /* Aumenta el tiempo de animación a 20s */
 }
 
 @keyframes fly {
@@ -368,35 +357,35 @@ html {
 /* Variación en tamaños, velocidades y posiciones iniciales */
 .butterfly:nth-child(1) {
     width: 40px;
-    animation: fly1 10s linear infinite, flutter 0.5s ease-in-out infinite;
+    animation: fly1 20s linear infinite, flutter 0.5s ease-in-out infinite; /* Cambié el tiempo a 20s */
     top: 20%; /* Posición inicial */
     left: 5%;
 }
 
 .butterfly:nth-child(2) {
     width: 60px;
-    animation: fly2 12s linear infinite, flutter 0.6s ease-in-out infinite;
+    animation: fly2 22s linear infinite, flutter 0.6s ease-in-out infinite; /* Cambié el tiempo a 22s */
     top: 10%;
     left: 80%;
 }
 
 .butterfly:nth-child(3) {
     width: 45px;
-    animation: fly3 8s linear infinite, flutter 0.4s ease-in-out infinite;
+    animation: fly3 18s linear infinite, flutter 0.4s ease-in-out infinite; /* Cambié el tiempo a 18s */
     top: 50%;
     left: 20%;
 }
 
 .butterfly:nth-child(4) {
     width: 55px;
-    animation: fly4 14s linear infinite, flutter 0.5s ease-in-out infinite;
+    animation: fly4 24s linear infinite, flutter 0.5s ease-in-out infinite; /* Cambié el tiempo a 24s */
     top: 70%;
     left: 60%;
 }
 
 .butterfly:nth-child(5) {
     width: 50px;
-    animation: fly5 11s linear infinite, flutter 0.5s ease-in-out infinite;
+    animation: fly5 20s linear infinite, flutter 0.5s ease-in-out infinite; /* Cambié el tiempo a 20s */
     top: 30%;
     left: 40%;
 }
@@ -645,3 +634,194 @@ html {
 
 
 
+/* Estilo para los destellos de magia */
+.magia {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    opacity: 0;
+    animation: destello 1s infinite alternate;
+}
+
+/* Animación de los destellos de magia */
+@keyframes destello {
+    0% {
+        opacity: 0.8;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+/* Agregar partículas de magia en posiciones aleatorias */
+.particle-container .magia {
+    top: calc(100vh * var(--i));
+    left: calc(100vw * var(--j));
+    animation-duration: calc(1s + (var(--i) * 0.5));
+    animation-delay: calc(0.5s + (var(--i) * 0.2));
+}
+
+
+
+
+
+
+.seccion-regalos {
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+.titulo-regalos {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.descripcion-regalos {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.informacion-regalos p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.informacion-regalos strong {
+    color: #ffcc00; /* Resalta la información importante */
+}
+
+
+.gift-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.gift-box {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: #ff69b4; /* Color de la caja */
+    border-radius: 5px;
+    animation: bounce 1.5s infinite;
+}
+
+    .gift-box .lid {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background-color: #ff69b4;
+        border-radius: 5px 5px 0 0;
+        animation: open-lid 2s infinite;
+    }
+
+    .gift-box .ribbon {
+        position: absolute;
+        background-color: #ffffff; /* Color del lazo */
+    }
+
+.ribbon-vertical {
+    width: 10px;
+    height: 100%;
+    left: 35px;
+}
+
+.ribbon-horizontal {
+    width: 100%;
+    height: 10px;
+    top: 35px;
+}
+
+.sparkles {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #ffd700; /* Color de los destellos */
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle-animation 1.5s infinite;
+}
+
+    .sparkle:nth-child(1) {
+        top: 10%;
+        left: 20%;
+        animation-delay: 0.2s;
+    }
+
+    .sparkle:nth-child(2) {
+        top: 30%;
+        left: 60%;
+        animation-delay: 0.5s;
+    }
+
+    .sparkle:nth-child(3) {
+        top: 50%;
+        left: 40%;
+        animation-delay: 0.8s;
+    }
+
+/* Animaciones */
+@keyframes open-lid {
+    0%, 100% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-15deg);
+    }
+}
+
+@keyframes sparkle-animation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
