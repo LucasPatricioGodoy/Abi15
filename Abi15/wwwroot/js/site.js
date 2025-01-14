@@ -21,6 +21,9 @@
         });
     };
 
+    
+
+
     // Inicializamos el observador de intersección para las secciones
     const sections = document.querySelectorAll('.section');
     if (sections.length > 0) {

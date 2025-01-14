@@ -8,22 +8,24 @@
 
 <div id="detalles" class="section">
     <h2>Detalles del Evento</h2>
-    <p>📅 Fecha: <strong>17 de marzo de 2025</strong></p>
-    <p>📍 Ubicación: <strong>Salón Luz de Luna, Ciudad XYZ</strong></p>
+    <p>📅 Fecha: <strong>22 de febrero de 2025</strong></p>
+    <p>📍 Ubicación: <strong>Cabo 2do Ricardo Ramírez esquina Víctor Guerrero S/N, Presidente Derqui</strong></p>
+    <button class="btn-mapa" onclick="abrirMapa()">Cómo llegar</button>
 </div>
+
 
 <div id="agenda" class="section">
     <h2>Agenda del Evento</h2>
     <ul>
-        <li>7:00 PM - Recepción</li>
-        <li>8:00 PM - Cena</li>
-        <li>10:00 PM - Baile</li>
+        <li>9:00 PM - Recepción</li>
+        <li>10:00 PM - Cena</li>
+        <li>∞ - Baile</li>
     </ul>
 </div>
 
 <div id="rsvp" class="section">
     <h2>RSVP</h2>
-    <p>Confirma tu asistencia antes del 1 de marzo de 2025.</p>
+    <p>Confirma tu asistencia antes del 4 de febrero de 2025.</p>
     <div id="formularioAsistencia">
         <div class="iframe-container">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScORAq3Kb5XxR8TfKF0Oxp2ugEaR1Dx_DFrTSS49cxx9Z4oJg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
@@ -33,37 +35,56 @@
 </div>
 
 <div id="galeria" class="section">
-
-
-
-
     <div class="gallery">
+        <h2>15 Años de Recuerdos, Amor y Aventuras</h2>
         <div class="carousel">
             <div class="slide">
                 <img src="/Images/foto1.jpg" alt="Imagen 1">
                 <div class="frase">Cada paso que das nos llena de alegría y amor ❤️</div>
             </div>
             <div class="slide">
-                <img src="/images/foto1.jpg" alt="Imagen 2">
+                <img src="/Images/foto2.jpg" alt="Imagen 2">
                 <div class="frase">El tiempo vuela, pero tu esencia sigue intacta... ¡Qué emoción verte crecer! 💫</div>
             </div>
             <div class="slide">
-                <img src="/Images/foto2.jpg" alt="Imagen 3">
+                <img src="/Images/foto3.jpg" alt="Imagen 3">
                 <div class="frase">Los mejores momentos siempre están rodeados de quienes más amamos ❤️</div>
             </div>
             <div class="slide">
-                <img src="/images/foto1.jpg" alt="Imagen 4">
-                <div class="frase">Así como en esta foto, sigues haciendo que el mundo sea un lugar más brillante 🌟</div>
+                <img src="/Images/foto4.jpg" alt="Imagen 4">
+                <div class="frase">Aunque crecemos, siempre seremos un equipo. Mis hermanas son mis compañeras de vida, ¡y qué suerte tengo de tenerlas! 👭</div>
+            </div>
+            <div class="slide">
+                <img src="/Images/foto5.jpg" alt="Imagen 5">
+                <div class="frase">La risa compartida y el amor hacen que cada día sea especial. Juntas, ¡somos imparables! 💕</div>
+            </div>
+            <div class="slide">
+                <img src="/Images/foto6.jpg" alt="Imagen 6">
+                <div class="frase">15 años llenos de historias, sonrisas y desafíos. Gracias por estar a mi lado en cada uno de ellos.</div>
+            </div>
+            <div class="slide">
+                <img src="/Images/foto7.jpg" alt="Imagen 7">
+                <div class="frase">La vida es un camino de aprendizajes y aventuras, y estoy lista para vivir cada momento con el corazón lleno de gratitud. 🌸</div>
+            </div>
+            <div class="slide">
+                <img src="/Images/foto8.jpg" alt="Imagen 8">
+                <div class="frase">Los sueños se construyen paso a paso, y este es solo el comienzo de muchos más. 🌠</div>
+            </div>
+            <div class="slide">
+                <img src="/Images/foto9.jpg" alt="Imagen 9">
+                <div class="frase">A cada paso, me doy cuenta de cuánto he crecido y lo feliz que me hace compartir este viaje con todos ustedes. ✨</div>
+            </div>
+            <div class="slide">
+                <img src="/Images/foto10.jpg" alt="Imagen 10">
+                <div class="frase">Hoy celebro todo lo que soy y todo lo que me espera. ¡El futuro es brillante! 🌟</div>
             </div>
         </div>
+
         <button class="prev">Anterior</button>
         <button class="next">Siguiente</button>
-
     </div>
-
-   
-
 </div>
+
 
 <div id="regalos" class="seccion-regalos">
     <div class="contenido-regalos">
@@ -85,11 +106,34 @@
             Aquí les dejo los detalles, en caso de que quieran hacerme un pequeño regalo:
         </p>
         <div class="informacion-regalos">
-            <p><strong>Alias:</strong> [Alias]</p>
-            <p><strong>CBU:</strong> [CBU]</p>
+            <p>
+                <strong>Alias:</strong> <span id="alias">AbiAlive2005</span>
+                <button class="btn-copiar" onclick="copiarAlPortapapeles('alias')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                    </svg>
+                </button>
+            </p>
+            <p>
+                <strong>CBU:</strong> <span id="cbu">0000003100056286252910</span>
+                <button class="btn-copiar" onclick="copiarAlPortapapeles('cbu')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                    </svg>
+                </button>
+            </p>
+            <p><strong>Abi Nahir Valdéz</strong></p>
         </div>
+
     </div>
 </div>
+
+<div id="final-message" class="section" style="text-align: center; padding: 2rem; background-color: rgba(0, 0, 0, 0.1); border-radius: 10px; margin-top: 2rem;">
+    <p style="font-family: 'Lora', serif; font-size: 1.5rem; color: #333; line-height: 1.6;">
+        Espero que puedas acompañarnos en este día tan especial, porque sin ti, la celebración no será completa. ¡No faltes! 💫
+    </p>
+</div>
+
 
 <div class="butterflies">
     <img src="/images/butterfly1.png" alt="Mariposa" class="butterfly">
